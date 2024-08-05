@@ -127,10 +127,10 @@ private:
         RCLCPP_INFO(this->get_logger(), "Downsampled input cloud to %d data points", input_cloud->width * input_cloud->height);
 
         // Rotate pcl alone x axis for 180 degree
-        Eigen::Matrix4f rotation = Eigen::Matrix4f::Identity();
-        rotation(1, 1) = -1;
-        rotation(2, 2) = -1;
-        pcl::transformPointCloud(*input_cloud, *input_cloud, rotation);
+        // Eigen::Matrix4f rotation = Eigen::Matrix4f::Identity();
+        // rotation(1, 1) = -1;
+        // rotation(2, 2) = -1;
+        // pcl::transformPointCloud(*input_cloud, *input_cloud, rotation);
 
         // Perform ICP alignment
         pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
@@ -225,10 +225,10 @@ private:
         RCLCPP_INFO(this->get_logger(), "Downsampled input cloud to %d data points", input_cloud->width * input_cloud->height);
 
         // Rotate pcl alone x axis for 180 degree
-        Eigen::Matrix4f rotation = Eigen::Matrix4f::Identity();
-        rotation(1, 1) = -1;
-        rotation(2, 2) = -1;
-        pcl::transformPointCloud(*input_cloud, *input_cloud, rotation);
+        // Eigen::Matrix4f rotation = Eigen::Matrix4f::Identity();
+        // rotation(1, 1) = -1;
+        // rotation(2, 2) = -1;
+        // pcl::transformPointCloud(*input_cloud, *input_cloud, rotation);
 
         // Perform ICP alignment
         pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
