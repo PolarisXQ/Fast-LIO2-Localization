@@ -26,13 +26,6 @@ def generate_launch_description():
       name='icp_node',
       output='screen',
       parameters=[
-          # --- Blue ---
-          # {'initial_x':14.16},
-          # {'initial_y':5.35},
-          # {'initial_z':0.0},
-          # {'initial_a':3.14},
-
-          # --- Red ---
           {'initial_x':0.0},
           {'initial_y':0.0},
           {'initial_z':0.0},
@@ -84,15 +77,7 @@ def generate_launch_description():
 
   ld = LaunchDescription()
 
-  # ld.add_action(rm_base_node)
-  ld.add_action(twist2chassis_cmd_node)
-  # ld.add_action(fake_joint_node)
-  ld.add_action(twist_transformer_node)
-  ld.add_action(rot_imu)
-  ld.add_action(mid360_node)
-  # ld.add_action(sentry_description)
   ld.add_action(map_odom_trans)
-  # ld.add_action(icp_node)
   ld.add_action(start_rviz)
   ld.add_action(delayed_start_lio)
 
