@@ -63,7 +63,7 @@ def generate_launch_description():
   )
         
   rviz_config_file = os.path.join(
-    get_package_share_directory('sentry_bringup'), 'rviz', 'loam_livox.rviz')
+    get_package_share_directory('fast_lio'), 'rviz', 'loam_livox.rviz')
   start_rviz = Node(
     package='rviz2',
     executable='rviz2',
